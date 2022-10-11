@@ -24,19 +24,22 @@ class Car {
         return 'Let\'s start !';
     }
 
-   public function forward() {
-        $this->currentSpeed = 50;
-        return 'We are going straight !';
+    public function forward(): string {
+        $this -> currentSpeed = 15;
+        return 'GO !';
     }
 
-   public function brake() {
+    public function brake(): string {
         $sentence = "";
+        $this->currentSpeed = 30;
 
-        while ($this->currentSpeed > 0) {
-            $this->currentSpeed--;
-            $sentence .= 'Brake !!!';
+        while($this -> currentSpeed > 0) {
+            $this -> currentSpeed-=5;
+            $sentence .= "BRAKE !!!";
         }
-        $sentence = "I'm stopped !";
+
+        $sentence .= "I'm stopped !";
+        return $sentence;
     }
 
     public function getNbWheels() {

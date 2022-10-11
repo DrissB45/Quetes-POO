@@ -7,14 +7,11 @@ $tMax = new Bicycle('black');
 
 $amgGT = new Car('blue', 5, 30);
 
+echo $tMax->forward();
 echo $tMax->brake();
 
-echo $amgGT->getEnergyLevel();
-
-?>
-
-
-
+echo $amgGT->forward();
+echo $amgGT->brake();
 
 
 
