@@ -1,55 +1,20 @@
 <?php
 
-require_once 'bicycle.php';
-require_once 'car.php';
+//Appel des fichiers contenant les classes
 
-$tMax = new Bicycle('black');
+require_once 'vehicle.php';
+require_once 'truck.php';
 
-$amgGT = new Car('blue', 5, 30);
+//Instanciation d'un nouveau camion
 
-echo $tMax->brake();
+$scania = new Truck(500, 'red', 3, 'fuel');
 
-echo $amgGT->getEnergyLevel();
+var_dump($scania);
 
-?>
+//Test des fonctions de mon camion
 
+echo $scania->forward() . PHP_EOL;
 
+echo $scania->brake() . PHP_EOL;
 
-
-
-
-
-/* $bike = new Bicycle();
-var_dump($bike);
-
-$bike -> color = 'blue';
-$bike -> currentSpeed = '0';
-var_dump($bike);
-
-//moving bike
-echo $bike->forward();
-echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
-
-//Instanciation d'un nouvel objet $rockrider
-$rockrider = new Bicycle();
-$rockrider->color = 'Yellow';
-
-//Instanciation d'un nouvel objet $tornado
-$tornado = new Bicycle();
-$tornado->color = 'Black';
-
-$tornado->setColor('blue');
-$tornado->getColor();
-
-echo $tornado
-
-$tornado = new Bicycle();
-$tornado->setColor('Orange');
-$tornado->getColor();
-$tornado->setCurrentSpeed(78);
-$tornado -> getCurrentSpeed();
-
-echo $tornado->getColor(); */
+echo $scania->loading() . PHP_EOL;
