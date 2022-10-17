@@ -5,13 +5,9 @@ require 'highway.php';
 final class MotorWay extends HighWay
 
 {
-    public function motorNbLane() 
+    public function __construct()
     {
         parent::setNbLane(4);
-    }
-
-    public function motorMaxSpeed()
-    {
         parent::setMaxSpeed(130);
     }
 
@@ -21,9 +17,8 @@ final class MotorWay extends HighWay
         {
             return 'Véhicules interdits !';
         } else {
-            $currentVehicles[] = $vehicle;
+            $this->currentVehicles[] = $vehicle;
         }        
     }
- 
 }
 

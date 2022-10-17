@@ -2,13 +2,9 @@
 
 final class PedestrianWay extends HighWay
 {
-    public function pedestrianNbLane() 
+    public function __construct()
     {
         parent::setNbLane(1);
-    }
-
-    public function pedestrianMaxSpeed()
-    {
         parent::setMaxSpeed(10);
     }
 
@@ -16,7 +12,7 @@ final class PedestrianWay extends HighWay
     {
         if ($vehicle instanceof Bike || $vehicle instanceof Skateboard)
         {
-            $currentVehicles[] = $vehicle;
+            $this->currentVehicles[] = $vehicle;
         } else {
             return 'Véhicules interdits !';
         }        

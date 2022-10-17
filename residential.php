@@ -2,13 +2,9 @@
 
 final class ResidentialWay extends HighWay
 {
-    public function residentialNbLane() 
+    public function __construct()
     {
         parent::setNbLane(2);
-    }
-
-    public function residentialMaxSpeed()
-    {
         parent::setMaxSpeed(50);
     }
 
@@ -16,7 +12,7 @@ final class ResidentialWay extends HighWay
     {
         if ($vehicle instanceof Vehicle)
         {
-            $currentVehicles[] = $vehicle;
+            $this->currentVehicles[] = $vehicle;
         } else {
             return 'Ce n\'est pas un véhicule !';
         }        
