@@ -1,20 +1,11 @@
 <?php
 
-//Appel des fichiers contenant les classes
+require 'motorway.php';
+require 'vehicle.php';
+require 'bike.php';
+require 'skateboard.php';
+require 'car.php';
 
-require_once 'vehicle.php';
-require_once 'truck.php';
-
-//Instanciation d'un nouveau camion
-
-$scania = new Truck(500, 'red', 3, 'fuel');
-
-var_dump($scania);
-
-//Test des fonctions de mon camion
-
-echo $scania->forward() . PHP_EOL;
-
-echo $scania->brake() . PHP_EOL;
-
-echo $scania->loading() . PHP_EOL;
+$bmx = new Bike('red', 1);
+$skate = new Skateboard('black', 1);
+$merco = new Car ('grey', 5, 'gas');
