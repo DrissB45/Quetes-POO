@@ -6,12 +6,13 @@ require 'bike.php';
 require 'skateboard.php';
 require 'car.php';
 
-$bmx = new Bike('red', 1);
-$skate = new Skateboard('black', 1);
-$merco = new Car ('grey', 5, 'gas');
+$merco = new Car('grey', 4, 'fuel');
 
-$rn20 = new MotorWay();
 
-$rn20->addVehicle($merco);
-
-var_dump($rn20);
+try {
+    echo $merco->start(false);
+} catch (Exception $exception) {
+    echo $merco->setParkBrake(false);
+} finally {
+    echo 'Ma voiture roule comme un donut !';
+}
