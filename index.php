@@ -1,12 +1,7 @@
 <?php
 
-require 'lighteableinterface.php';
-require 'vehicle.php';
-require 'bike.php';
-require 'skateboard.php';
-require 'car.php';
+require 'speedometer.php';
 
-$bike = new Bike('red', 1);
-
-$bike->setCurrentSpeed(15);
-echo $bike->switchOn();
+echo Speedometer::convertKmToMiles(10);
+echo "\n";
+echo Speedometer::convertMilesToKm(3);
